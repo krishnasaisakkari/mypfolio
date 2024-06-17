@@ -1,0 +1,648 @@
+body {
+    font-family:'poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 103%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    position: relative;
+    
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 1rem;
+    margin-right: 20px;
+    /* position: relative; */
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: .3s ease;
+    line-height: 10px;
+}
+/* .navbar-menu a:before{
+  content:"";
+  position: absolute;
+  height: 2px;
+  width:0;
+  left: 0;
+  bottom: -4px;
+  visibility: hidden;
+  background-color: #18d26e;
+} */
+.navbar-menu a:hover{
+  background-color: #18d26e;
+
+}
+.navbar-menu a:active{
+  background-color: #212422;
+
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        transition:.6s ease 1s;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+        margin-right: -7px;
+    }
+}
+
+section {
+    padding: 60px 20px;
+    margin-top: 30px;
+}
+
+section h1, section h2,section p {
+    margin-top: 0;
+    color: white;
+}
+.section-title p {
+    margin: 0;
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+.section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: #4ceb95;
+    margin: 4px 10px;
+}
+
+@media (min-width: 425px) {
+    section {
+        padding: 60px 10px;
+    }
+    section p{}
+}
+.about{
+
+}
+@media (max-width:768px) {
+    .about{
+        display: flex; justify-content: center; align-items: center;
+    }
+}
+.about-me .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #18d26e;
+  }
+  
+  .about-me .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-me .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-me .content ul strong {
+    margin-right: 10px;
+  }
+  
+  .about-me .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #18d26e;
+    line-height: 0;
+  }
+  
+  .about-me .content p:last-child {
+    margin-bottom: 0;
+  }
+  .container1{
+    height: 400px;
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    border-radius: 1em;
+    gap: 1em;
+    margin-top: 150px;
+    /* background-image: url(./assets/img1.jpg); */
+    /* font-size: clamp(100px,70px,100px); */
+  }
+  .box{
+    /* border-radius: 1em; */
+    /* background: rgba(225, 225, 225,0.1);
+    backdrop-filter: blur(10px); */
+
+  }
+  .box1{
+    flex: 4;
+    display: table-column;
+    flex-direction:column;
+    text-align: left;
+     /* border-left: 2px solid tomato; */
+  }
+  .box1 h1{
+    color:white;
+    font-size: clamp(35px,4vw,190px);
+    /* border-left: 2px solid tomato; */
+  }
+  .box1 p{
+    font-size: clamp(15px,2vw,40px);
+    
+    
+  }
+ .box2{
+    flex: 1;
+    /* background: #fff; */
+ }
+ .box3{
+  flex:0.1;
+  border-right: 2px solid #18d26e;
+  /* display: list-item  ; */
+  align-self: center;
+  
+}
+.box3 p{
+  font-size: clamp(15px,1vw,20px);
+  margin-left: 0;
+  color:white;
+  
+
+ }
+ .box3 i{
+  font-size: clamp(15px,1vw,20px);
+ }
+ .box3 a{
+  color: #18d26e;
+ }
+ 
+ .box2 h1{
+  font-size: clamp(24px,2vw,30px);
+  margin-right: 10px;
+  -webkit-text-stroke: 1px #18d26e;
+  opacity: 0.7;
+  color: transparent;
+  transform: rotate(270deg) translateY(100px) translateX(-100px);
+ }
+ @media (width<569px) {
+  .box2 h1{
+    margin-right: 70px;
+    font-size: 20px;
+    transform: rotate(270deg) translateY(70px) translateX(-100px);
+    -webkit-line-clamp: 1;
+  }
+ }
+
+.portfolio{
+  background-color: black;
+}
+
+ .portfolio .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  .portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 15px auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+    padding: 2px 15px;
+  }
+  
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(14, 13, 13, 0.1);
+    margin: 0 3px 10px 3px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+  }
+  
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    background: #18d26e;
+  }
+  
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+  }
+  
+  .portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info::before {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-info p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 2px;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #63eda3;
+  }
+  
+  .portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+  }
+  
+  .portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+  }
+  
+  .portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* Add this CSS to your stylesheet */
+.portfolio-item {
+  opacity: 1;
+  transition: 0.3s ease-in-out, 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  scale: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  scale: 0;
+  transform: translateY(20px);
+}
+
+.portfolio-container.animating .portfolio-item {
+  transition:none;
+}
+/* resume */
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #18d26e;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #18d26e;
+  border: 2px solid #18d26e;
+}
+
+/* resume ends */
+
+/* SKILLS */
+
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #18d26e;
+}
+
+/* SKILLS SEC ENDS */
+.contact .info-box {
+  color: #444444;
+  padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact .info-box i.bx {
+  font-size: 24px;
+  color: #18d26e;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+
+.contact .info-box p {
+  padding: 0;
+  color: #fff;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+
+.contact .info-box .social-links {
+  margin: 5px 0 0 68px;
+  display: flex;
+}
+
+.contact .info-box .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.contact .info-box .social-links a:hover {
+  color: #18d26e;
+}
+
+.contact .php-email-form {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  background:#18d26e;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+.contact .php-email-form input::-moz-placeholder,
+.contact .php-email-form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input {
+  padding: 10px 15px;
+}
